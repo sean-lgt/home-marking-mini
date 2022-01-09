@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/Home/Home",
+    "pages/Publish/Publish",
+    "pages/Message/Message",
+    "pages/My/My",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#fbc02d",
+    "color": "#8a8a8a",
+    "list": [
+      {
+        "pagePath": "pages/Home/Home",
+        "text": "广场",
+        "selectedIconPath": "asset/images/tab-bar/square-selected.png",
+        "iconPath": "asset/images/tab-bar/square.png"
+      },
+      {
+        "pagePath": "pages/Publish/Publish",
+        "text": "发布",
+        "selectedIconPath": "asset/images/tab-bar/publish-selected.png",
+        "iconPath": "asset/images/tab-bar/publish.png"
+      },
+      {
+        "pagePath": "pages/Message/Message",
+        "text": "消息",
+        "selectedIconPath": "asset/images/tab-bar/message-selected.png",
+        "iconPath": "asset/images/tab-bar/message.png"
+      },
+      {
+        "pagePath": "pages/My/My",
+        "text": "我的",
+        "selectedIconPath": "asset/images/tab-bar/my-selected.png",
+        "iconPath": "asset/images/tab-bar/my.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
