@@ -1,48 +1,104 @@
 // index.js
+import Service from "../../models/service";
+import Category from "../../models/category";
+import { throttle } from "../../utils/utils";
+import { setTabBarBadge } from "../../utils/wx";
 // 获取应用实例
 const app = getApp()
-
+const serviceModel = new Service()
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    loading: true, //是否展示骨架屏组件
+    tabs: ['所有服务', '在提供', '正在找'], //tab栏配置
+    serviceList: [], //服务列表
+    currentCategoryId: 0,
+    multiple: 0, //是否多选
+    categoryList: [], //分类列表
+    currentTabIndex: 0,
+    showStatus: false, //展示状态
   },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    }
-  },
-  getUserProfile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    })
-  },
-  getUserInfo(e) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
+  // 页面第一次加载
+  onload: async function(options) {
+    // 获取所有分类列表
+    const categoryList = await Category.getCategoryListWithAll();
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      categoryList,
+      multiple: 2
     })
+    await this._getInitServiceList(this.data.currentTabIndex)
+    this.setData({
+      loading: false //关闭骨架屏
+    })
+  },
+  // 页面每次进入都执行
+  onShow: function() {
+    const unreadCount = wx.getStorageSync('unread-count')
+    setTabBarBadge(unreadCount)
+  },
+  //改变tab栏事件
+  handleTabChange(event) {
+    const index = event.detail.index
+    this._getInitServiceList(index, this.data.currentCategoryId)
+  },
+  //切换分类栏
+  handleChangeCategory: throttle(function(event) {
+    const categoryId = event.currentTarget.dataset.id
+    if (categoryId === this.data.currentCategoryId) {
+      // 点击的id等于当前的id 则return
+      return false
+    }
+    this._getInitServiceList(this.data.currentTabIndex, categoryId)
+  }),
+  // 点击具体某项
+  handleSelect(event) {
+    console.log("点击了具体某项")
+  },
+
+  /**
+   * @description: 获取服务列表数据
+   * @return {*}
+   * @param {*} currentTabIndex tab栏激活项
+   * @param {*} categoryId  分类id
+   */
+  async _getInitServiceList(currentTabIndex = 0, categoryId) {
+    this.setData({
+      currentTabIndex: currentTabIndex,
+      currentCategoryId: categoryId,
+      showStatus: false
+    })
+    const serviceList = await serviceModel.reset().getServiceList(currentTabIndex, categoryId);
+
+    this.setData({
+      showStatus: !serviceList.length,
+      serviceList
+    })
+  },
+  handleNavRemark: function() {
+    wx.navigateTo({
+      url: "/pages/remark/index"
+    })
+  },
+  // 下拉更新
+  onPullDownRefresh: function() {
+    this._getInitServiceList(this.data.currentTabIndex, this.data.currentCategoryId)
+    wx.stopPullDownRefresh()
+  },
+  // 滚动触底加载下一页数据
+  onReachBottom: async function() {
+    if (!serviceModel.hasMoreData) {
+      return
+    }
+    const serviceList = await serviceModel.getServiceList(this.data.currentTabIndex, this.data.currentCategoryId);
+    this.setData({
+      serviceList
+    })
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function() {
+
   }
+
 })

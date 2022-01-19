@@ -1,0 +1,47 @@
+/* components/tabs/index.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.tabs{
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  /* 吸顶 */
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.tab-item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-label{
+  color: #888888;
+  white-space: nowrap;
+}
+
+.divider{
+  margin-top: 10rpx;
+  height: 6rpx;
+  width: 50rpx;
+  background-color: #f3d066;
+  font-weight: bold;
+}
+
+.extend {
+  height: 210rpx;
+}
+
+.tab-planel {
+  flex: 1;
+  padding-top: 30rpx;
+}
