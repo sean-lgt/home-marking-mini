@@ -18,8 +18,7 @@ Page({
     showStatus: false, //展示状态
   },
   // 页面第一次加载
-  onload: async function(options) {
-    // 获取所有分类列表
+  onLoad: async function(options) {
     const categoryList = await Category.getCategoryListWithAll();
     this.setData({
       categoryList,
@@ -27,13 +26,15 @@ Page({
     })
     await this._getInitServiceList(this.data.currentTabIndex)
     this.setData({
-      loading: false //关闭骨架屏
+      loading: false
     })
+
   },
+
   // 页面每次进入都执行
   onShow: function() {
     const unreadCount = wx.getStorageSync('unread-count')
-    setTabBarBadge(unreadCount)
+    // setTabBarBadge(unreadCount)
   },
   //改变tab栏事件
   handleTabChange(event) {
@@ -60,7 +61,7 @@ Page({
    * @param {*} currentTabIndex tab栏激活项
    * @param {*} categoryId  分类id
    */
-  async _getInitServiceList(currentTabIndex = 0, categoryId) {
+  async _getInitServiceList(currentTabIndex = 0, categoryId = 0) {
     this.setData({
       currentTabIndex: currentTabIndex,
       currentCategoryId: categoryId,

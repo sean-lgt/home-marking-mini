@@ -31,6 +31,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    aaaa(e) {
+      console.log("sdfas", e)
+    },
     /**
      * @description: 点击tab栏切换 使用节流反正重复点击请求
      * @return {*}
@@ -52,14 +55,15 @@ Component({
      * @param {*} event
      */
     handleTouchmove(event) {
-      // 0不动 -1后退 1前进
       const direction = event.direction
+
       const currentTabIndex = this.data.currentTabIndex
       const targetTabIndex = currentTabIndex + direction
 
       if (targetTabIndex < 0 || targetTabIndex > this.data.tabs.length - 1) {
-        return false
+        return
       }
+
       const customEvent = {
         currentTarget: {
           dataset: {

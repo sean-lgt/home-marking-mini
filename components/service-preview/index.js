@@ -23,6 +23,9 @@ Component({
     //点击具体详情
     handleSelect() {
       this.triggerEvent('select', { service: this.properties.service })
+    },
+    aa(){
+      console.log("sdfaf")
     }
   }
 })

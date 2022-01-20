@@ -113,4 +113,3 @@ const localeConfig = {
     }
   }
 }
-}
