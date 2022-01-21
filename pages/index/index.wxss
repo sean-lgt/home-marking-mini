@@ -1,5 +1,6 @@
 /**index.wxss**/
 /* 需要引入骨架屏的css */
+@import "./index.skeleton.wxss";
 .container {
   height: 100%;
 }
@@ -43,3 +44,4 @@
   height: 300rpx;
   width: 100%;
 }
+

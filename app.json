@@ -50,7 +50,10 @@
     "i-safe-area": "/components/safe-area/index",
     "i-avatar": "/components/avatar/index",
     "i-show-status": "/components/show-status/index",
-    "i-skeleton": "/components/skeleton/index"
+    "i-skeleton": "/components/skeleton/index",
+    "i-button": "/components/button/index",
+    "i-rating": "/components/rating/index",
+    "i-rating-item": "/components/rating-item/index"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

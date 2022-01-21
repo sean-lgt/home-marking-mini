@@ -1,0 +1,169 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/1/21 上午11:15:28
+使用方法：
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\lin-file\mini-study\home-marking-demo\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container">
+      <view class="container">
+        <view is="components/tabs/index">
+          <view class="tabs-index--container">
+            <view class="tabs-index--tabs">
+              <view class="tabs-index--tab-item">
+                <view class="tabs-index--tab-label tabs-index--active-tab sk-transparent sk-text-14-2857-874 sk-text" data-index="0">
+                  所有服务
+                </view>
+                <view class="tabs-index--divider"></view>
+              </view>
+              <view class="tabs-index--tab-item">
+                <view class="tabs-index--tab-label sk-transparent sk-text-14-2857-918 sk-text" data-index="1">
+                  在提供
+                </view>
+              </view>
+              <view class="tabs-index--tab-item">
+                <view class="tabs-index--tab-label sk-transparent sk-text-14-2857-821 sk-text" data-index="2">
+                  正在找
+                </view>
+              </view>
+            </view>
+            <view>
+              <view class="remark">
+                <image class="remark-image sk-image"></image>
+              </view>
+              <view class="category-swiper">
+                <swiper display-multiple-items="2" next-margin="60rpx" style="height:75px" current="0" autoplay="false">
+                  <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+                    <view class="category-swiper-item sk-image" data-id="0">
+                      <text class="sk-transparent sk-text-14-2857-48 sk-text">全部</text>
+                    </view>
+                  </swiper-item>
+                </swiper>
+              </view>
+            </view>
+            <view class="tabs-index--tab-planel">
+              <view>
+                <view class="service-preview">
+                  <view is="components/service-preview/index">
+                    <view class="preview-index--container">
+                      <view class="preview-index--left">
+                        <view class="preview-index--type-tag sk-transparent sk-text-14-2857-97 sk-text">正在找</view>
+                        <image class="preview-index--cover-image sk-image" mode="aspectFill"></image>
+                      </view>
+                      <view class="preview-index--right">
+                        <view class="preview-index--row">
+                          <view class="preview-index--service-name sk-transparent sk-text-14-2857-225 sk-text">装修设计服务</view>
+                          <view class="preview-index--category-tag">
+                            <view is="components/icon/index">
+                              <view class="icon-index--iconfont icon-index--icon-biaoqian sk-pseudo sk-pseudo-circle" style="font-size:17px;color:#f27013;"></view>
+                            </view>
+                            <view class="preview-index--tag-text sk-transparent sk-text-14-2857-327 sk-text">装修</view>
+                          </view>
+                        </view>
+                        <view class="preview-index--row">
+                          <view class="preview-index--publisher">
+                            <view is="components/avatar/index">
+                              <view class="avatar-index--container">
+                                <view class="avatar-index--avatar">
+                                  <image class="avatar-index--avatar-image sk-image" style="width: 20px;height: 20px;border-radius: 50%"></image>
+                                </view>
+                                <view class="avatar-index--nickname sk-transparent sk-opacity" style="font-size: 11px">朕
+                                </view>
+                              </view>
+                            </view>
+                          </view>
+                        </view>
+                        <view class="preview-index--row">
+                          <view class="preview-index--publish-date sk-transparent sk-text-14-2857-143 sk-text">2021-12-26 23:28:32</view>
+                        </view>
+                        <view class="preview-index--row preview-index--row-last">
+                          <view class="preview-index--price sk-transparent">
+                            <text class="preview-index--label sk-transparent sk-opacity">￥</text> 2222.00
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="service-preview">
+                  <view is="components/service-preview/index">
+                    <view class="preview-index--container">
+                      <view class="preview-index--left">
+                        <view class="preview-index--type-tag sk-transparent sk-text-14-2857-223 sk-text">正在找</view>
+                        <image class="preview-index--cover-image sk-image" mode="aspectFill"></image>
+                      </view>
+                      <view class="preview-index--right">
+                        <view class="preview-index--row">
+                          <view class="preview-index--service-name sk-transparent sk-text-14-2857-524 sk-text">维修显示器</view>
+                          <view class="preview-index--category-tag">
+                            <view is="components/icon/index">
+                              <view class="icon-index--iconfont icon-index--icon-biaoqian sk-pseudo sk-pseudo-circle" style="font-size:17px;color:#f27013;"></view>
+                            </view>
+                            <view class="preview-index--tag-text sk-transparent sk-text-14-2857-373 sk-text">家电维修</view>
+                          </view>
+                        </view>
+                        <view class="preview-index--row">
+                          <view class="preview-index--publisher">
+                            <view is="components/avatar/index">
+                              <view class="avatar-index--container">
+                                <view class="avatar-index--avatar">
+                                  <image class="avatar-index--avatar-image sk-image" style="width: 20px;height: 20px;border-radius: 50%"></image>
+                                </view>
+                                <view class="avatar-index--nickname sk-transparent sk-text-14-2857-430 sk-text" style="font-size: 11px">Iron ox😈
+                                </view>
+                              </view>
+                            </view>
+                          </view>
+                        </view>
+                        <view class="preview-index--row">
+                          <view class="preview-index--publish-date sk-transparent sk-text-14-2857-380 sk-text">2021-12-16 10:27:42</view>
+                        </view>
+                        <view class="preview-index--row preview-index--row-last">
+                          <view class="preview-index--price sk-transparent">
+                            <text class="preview-index--label sk-transparent sk-opacity">￥</text> 198.00
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="service-preview">
+                  <view is="components/service-preview/index">
+                    <view class="preview-index--container">
+                      <view class="preview-index--left">
+                        <view class="preview-index--type-tag sk-transparent sk-text-14-2857-727 sk-text">正在找</view>
+                        <image class="preview-index--cover-image sk-image" mode="aspectFill"></image>
+                      </view>
+                      <view class="preview-index--right">
+                        <view class="preview-index--row">
+                          <view class="preview-index--service-name sk-transparent sk-text-14-2857-695 sk-text">天秀创意粉刷</view>
+                          <view class="preview-index--category-tag">
+                            <view is="components/icon/index">
+                              <view class="icon-index--iconfont icon-index--icon-biaoqian sk-pseudo sk-pseudo-circle" style="font-size:17px;color:#f27013;"></view>
+                            </view>
+                            <view class="preview-index--tag-text sk-transparent sk-text-14-2857-57 sk-text">装修</view>
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

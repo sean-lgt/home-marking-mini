@@ -1,6 +1,8 @@
 <!-- index.wxml -->
 <!-- TODO 需要引进骨架屏文件 -->
+<import src="index.skeleton.wxml"/>
 <!-- 展示骨架屏 -->
+<template is="skeleton" wx-if="{{loading}}"/>
 <view class="container">
   <view class="container">
     <i-tabs tabs="{{tabs}}" catch:change="handleTabChange">

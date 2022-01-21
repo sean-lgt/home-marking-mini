@@ -1,0 +1,8 @@
+/* components/rating/index.wxss */
+.container {
+  display: flex;
+}
+
+.item {
+  padding: 10rpx 10rpx;
+}

@@ -32,7 +32,7 @@ class Service extends Base { //继承的方式
    */
   static async getServiceById(id) {
     return Http.request({
-      url: `url/service/${id}`
+      url: `v1/service/${id}`
     })
   }
   /**
@@ -87,7 +87,7 @@ class Service extends Base { //继承的方式
     //合并数据
     this.data = this.data.concat(serviceList.data)
     //判断是否已无更多数据
-    this.hasMoreData = !(this.page === serviceList.last_page)
+    this.hasMoreData = !(this.page >= serviceList.last_page)
     this.page++
     return this.data
 
@@ -116,7 +116,7 @@ class Service extends Base { //继承的方式
     //合并数据
     this.data = this.data.concat(serviceList.data)
     //判断是否已无更多数据
-    this.hasMoreData = !(this.page === serviceList.last_page)
+    this.hasMoreData = !(this.page >= serviceList.last_page)
     this.page++
     return this.data
   }

@@ -52,7 +52,11 @@ Page({
   }),
   // 点击具体某项
   handleSelect(event) {
-    console.log("点击了具体某项")
+    console.log("点击了具体某项", event)
+    const service = event.detail.service;
+    wx.navigateTo({
+      url: `/pages/service-detail/index?id=${service.id}`
+    })
   },
 
   /**
