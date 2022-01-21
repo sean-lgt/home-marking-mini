@@ -1,35 +1,40 @@
 /* components/tabs/index.wxss */
-.container{
+.container {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
 
-.tabs{
+.tabs {
   padding: 30rpx 0;
   box-sizing: border-box;
   background-color: #fff;
   display: flex;
   align-items: center;
-  /* 吸顶 */
   position: sticky;
   top: 0;
   z-index: 99;
 }
 
-.tab-item{
+.tab-item {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.tab-label{
+
+.tab-label {
   color: #888888;
-  white-space: nowrap;
+  white-space: nowrap
 }
 
-.divider{
+.active-tab {
+  font-weight: bold;
+  color: #333333;
+}
+
+.divider {
   margin-top: 10rpx;
   height: 6rpx;
   width: 50rpx;

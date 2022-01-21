@@ -1,0 +1,3 @@
+<!-- components/icon/index.wxml -->
+<!-- icon组件 -->
+<view class="iconfont icon-{{name}}" style="font-size:{{size}}rpx;{{color?'color:'+color+';':''}}"></view>

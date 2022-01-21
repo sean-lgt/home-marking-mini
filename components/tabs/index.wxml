@@ -8,16 +8,12 @@
       <view class="tab-label {{currentTabIndex === index ? 'active-tab':''}}" data-index="{{index}}" bind:tap="handleSwitchTab">
         {{item}}
       </view>
-      <view wx:if="{{currentTabIndex === index}}" class="divider"></view>
+      <view wx:if="{{currentTabIndex === index}}" class="divider" />
     </view>
   </view>
-  <!-- 自定义插槽扩展 -->
   <slot name="extend"></slot>
-  <!-- 列表展示 -->
   <view class="tab-planel" bind:touchstart="{{handleTouch.handleTouchStart}}" bind:touchend="{{handleTouch.handleTouchEnd}}">
-    <!-- 列表插槽 -->
     <slot name="plan"></slot>
-    <!-- 安全区域块 -->
-    <i-safe-area area="bottom"></i-safe-area>
+    <i-safe-area area="bottom" />
   </view>
 </view>
