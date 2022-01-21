@@ -1,0 +1,6 @@
+<!-- components/button/index.wxml -->
+<!-- button组件 -->
+<label for="ibutton">
+  <!-- 常规按钮 -->
+  <!-- <view wx:if="{{!}}"></view> -->
+</label>

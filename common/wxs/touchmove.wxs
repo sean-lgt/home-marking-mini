@@ -1,14 +1,11 @@
 // 不能使用ES6语法
 var touchStart
-console.log("aaa")
 
 function handleTouchStart(event) {
-  console.log("出发")
   touchStart = event.changedTouches[0].clientX
 }
 
 function handleTouchEnd(event, ownerInstance) {
-  console.log("sda")
   var touchEndX = event.changedTouches[0].clientX
   var distance = touchEndX - touchStart
 

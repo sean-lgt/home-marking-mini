@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/service-detail/index",
     "pages/Home/Home",
     "pages/Publish/Publish",
     "pages/Message/Message",
@@ -47,7 +48,9 @@
     "i-tabs": "/components/tabs/index",
     "i-icon": "/components/icon/index",
     "i-safe-area": "/components/safe-area/index",
-    "i-avatar": "/components/avatar/index"
+    "i-avatar": "/components/avatar/index",
+    "i-show-status": "/components/show-status/index",
+    "i-skeleton": "/components/skeleton/index"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
