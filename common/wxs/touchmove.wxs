@@ -27,6 +27,7 @@ function handleTouchEnd(event, ownerInstance) {
   touchStart = 0
 }
 
+
 module.exports = {
   handleTouchStart: handleTouchStart,
   handleTouchEnd: handleTouchEnd

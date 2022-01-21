@@ -24,7 +24,7 @@ Component({
     handleSelect() {
       this.triggerEvent('select', { service: this.properties.service })
     },
-    aa(){
+    aa() {
       console.log("sdfaf")
     }
   }
