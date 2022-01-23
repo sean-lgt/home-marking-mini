@@ -54,7 +54,10 @@
     "i-skeleton": "/components/skeleton/index",
     "i-button": "/components/button/index",
     "i-rating": "/components/rating/index",
-    "i-rating-item": "/components/rating-item/index"
+    "i-rating-item": "/components/rating-item/index",
+    "i-grid": "/components/grid/index",
+    "i-grid-item": "/components/grid-item/index",
+    "i-badge": "/components/badge/index"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

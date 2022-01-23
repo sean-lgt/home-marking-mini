@@ -42,7 +42,6 @@ Page({
   onShow: async function() {
     const unreadCount = wx.getStorageSync("unread-count");
     //TODO:动态设置tabbar
-
     const res = await Token.verifyToken()
     if (res.valid) {
       const userInfo = wx.getStorageSync("userInfo")

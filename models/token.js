@@ -28,7 +28,7 @@ class Token {
   static async verifyToken() {
     const token = wx.getStorageSync("token");
     return await Http.request({
-      URL: `${Token.tokenUrl}/verify`,
+      url: `${Token.tokenUrl}/verify`,
       data: { token },
       method: 'POST'
     })

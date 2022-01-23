@@ -1,0 +1,8 @@
+<!-- components/badge/index.wxml -->
+<!-- 角标组件 -->
+<!-- 引入wxs格式化数值count 提高渲染性能 -->
+<wxs src="./count.wxs" module="countFormat"></wxs>
+<view class="container">
+  <view wx:if="{{show}}" class="dot {{type}}">{{countFormat.countFormat(count)}}</view>
+  <slot></slot>
+</view>
