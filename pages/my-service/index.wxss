@@ -1,0 +1,9 @@
+/* pages/my-service/index.wxss */
+/* TODO:需要引入骨架屏样式 */
+.container {
+  height: 100%;
+}
+
+.service-preview {
+  margin-bottom: 30rpx;
+}

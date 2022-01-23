@@ -1,0 +1,9 @@
+/* pages/my-order/index.wxss */
+/* 需要引入骨架屏文件 */
+.container {
+  height: 100%;
+}
+
+.order-preview {
+  margin-bottom: 30rpx;
+}

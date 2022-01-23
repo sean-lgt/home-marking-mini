@@ -1,0 +1,17 @@
+/* pages/my-order/components/consumer-action/index.wxss */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.business-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basic-button {
+  margin-left: 30rpx;
+}

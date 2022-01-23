@@ -1,0 +1,20 @@
+<!-- pages/my-order/index.wxml -->
+<!-- 我的订单页面 -->
+<!-- TODO:需要引入骨架屏 -->
+<!-- 引入wxs 处理状态文字信息 -->
+<wxs src="/common/wxs/order-status.wxs" module="statusConvert"></wxs>
+<view class="container">
+  <i-tabs tabs="{{tabs}}" active="{{currentTabIndex}}" bind:change="handleTabChange" data-skeleton-hide="hideTabsLoading">
+    <view slot="plan">
+      <view class="order-preview" data-skeleton-hide="hideTabsLoading" wx:for="{{orderList}}" wx:key="index">
+        <i-order-preview role="{{role}}" order="{{item}}">
+          <!-- 顾客 -->
+          <i-consumer-action wx:if="{{role === roleType.CONSUMER}}" order="{{item}}" bind:nav-detaile="handleNavDetail" bind:refund="handleRefund" bind:chat="handleChat"></i-consumer-action>
+          <!-- 发布者 -->
+          <i-publisher-action wx:if="{{role === roleType.PUBLISHER}}" order="{{item}}" bind:nav-detail="handleNavDetail" bind:chat="handleChat"></i-publisher-action>
+        </i-order-preview>
+      </view>
+      <i-show-status show="{{!orderList.length}}" top="220" content="暂时还没有任何订单"></i-show-status>
+    </view>
+  </i-tabs>
+</view>

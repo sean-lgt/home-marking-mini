@@ -85,14 +85,21 @@ Page({
     const cell = event.detail.cell
     if (!('status' in cell)) {
       wx.navigateTo({
-        url: `pages/refund-list/index?role=${cell.role}`,
+        url: `/pages/refund-list/index?role=${cell.role}`,
       })
       return false
     }
     wx.navigateTo({
-      url: `pages/my-order/index?role=${cell.role}&status=${cell.status}`,
+      url: `/pages/my-order/index?role=${cell.role}&status=${cell.status}`,
     })
 
+  },
+  handleNavToMyService(event) {
+    console.log("event", event)
+    const { type, status } = event.detail.cell
+    wx.navigateTo({
+      url: `/pages/my-service/index?type=${type}&status=${status}`
+    })
   },
 
   /**

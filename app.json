@@ -6,7 +6,9 @@
     "pages/Home/Home",
     "pages/Publish/Publish",
     "pages/Message/Message",
-    "pages/My/My"
+    "pages/My/My",
+    "pages/my-order/index",
+    "pages/my-service/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -57,7 +59,8 @@
     "i-rating-item": "/components/rating-item/index",
     "i-grid": "/components/grid/index",
     "i-grid-item": "/components/grid-item/index",
-    "i-badge": "/components/badge/index"
+    "i-badge": "/components/badge/index",
+    "i-order-preview": "/components/order-preview/index"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

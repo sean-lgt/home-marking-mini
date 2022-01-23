@@ -80,3 +80,5 @@ class Order extends Base {
   }
 
 }
+
+export default Order
