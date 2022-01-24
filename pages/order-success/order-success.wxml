@@ -1,0 +1,21 @@
+<!-- pages/order-success/order-success.wxml -->
+<view class="container">
+  <pm-msg type="success" title="预定成功">
+    <view slot="desc">请耐心等待服务提供者确定同意后支付服务费用</view>
+    <view slot="extend">
+      <view>1.防止上当受骗提示内容</view>
+      <view>1.防止上当授权哦</view>
+    </view>
+    <view slot="handle">
+      <i-button size="long" bind:tap="handleCheckOrder">查看订单状态</i-button>
+      <view style="margin-top:30rpx;">
+        <i-button size="long" bgColor="#f2f2f2" fontColor="#333333" bind:tap="handleNavToHome">
+          返回首页
+        </i-button>
+      </view>
+      <view slot="footer">
+        <view class="weui-footer__text">lalala,lalala</view>
+      </view>
+    </view>
+  </pm-msg>
+</view>

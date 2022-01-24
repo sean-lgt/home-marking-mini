@@ -8,7 +8,9 @@
     "pages/Message/Message",
     "pages/My/My",
     "pages/my-order/index",
-    "pages/my-service/index"
+    "pages/my-service/index",
+    "pages/pay-success/index",
+    "pages/order-success/order-success"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -63,5 +65,8 @@
     "i-order-preview": "/components/order-preview/index"
   },
   "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  },
   "sitemapLocation": "sitemap.json"
 }

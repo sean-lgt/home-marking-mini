@@ -1,0 +1,4 @@
+/* pages/pay-success/index.wxss */
+page {
+  background-color: #fff;
+}
