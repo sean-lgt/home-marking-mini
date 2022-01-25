@@ -1,0 +1,4 @@
+/* pages/order-detail/components/consumer-action/index.wxss */
+.refund, .cancel {
+  margin-top: 30rpx;
+}

@@ -10,7 +10,10 @@
     "pages/my-order/index",
     "pages/my-service/index",
     "pages/pay-success/index",
-    "pages/order-success/order-success"
+    "pages/order-success/order-success",
+    "pages/order/index",
+    "pages/order-detail/index",
+    "pages/rating/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
