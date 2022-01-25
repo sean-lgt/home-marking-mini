@@ -1,0 +1,16 @@
+<!-- 图片上传组件 -->
+<view class="container">
+  <view wx:for="{{_files}}" wx:key="index" class="uploader-item">
+    <image class="display-item" mode="aspectFill" src="{{item.path}}" bind:tap="handlePreview" data-index="{{index}}"></image>
+    <view class="icon-uploading" wx:if="{{item.status === uploadStatusEnum.UPLOADING}}">
+      <i-icon name="upload" size="60" color="#fff"></i-icon>
+    </view>
+    <view class="icon-delete" bind:tap="handleDelete" data-index="{{index}}">
+      <i-icon name="close" size="20" color="#fff"></i-icon>
+    </view>
+    <view class="error" wx:if="{{item.status === uploadStatusEnum.ERROR}}">上传失败</view>
+  </view>
+  <view class="choose-image" wx:if="{{_files.length < maxCount}}" bind:tap="handleChooseImage">
+    <i-icon name="add" size="60"></i-icon>
+  </view>
+</view>
