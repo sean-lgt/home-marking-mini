@@ -8,7 +8,10 @@
     "pages/Message/Message",
     "pages/My/My",
     "pages/my-order/index",
-    "pages/my-service/index"
+    "pages/my-service/index",
+    "pages/order/index",
+    "pages/order-detail/index",
+    "pages/rating/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
