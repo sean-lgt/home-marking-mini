@@ -1,2 +1,5 @@
-<!--pages/Publish/Publish.wxml-->
-<text>pages/Publish/Publish.wxml</text>
+<!-- pages/Publish/Publish.wxml -->
+<!-- 发布页面 -->
+<view class="container">
+  <i-service-form form="{{formData}}" bind:submit="handleSubmit" />
+</view>

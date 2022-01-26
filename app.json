@@ -65,7 +65,16 @@
     "i-grid": "/components/grid/index",
     "i-grid-item": "/components/grid-item/index",
     "i-badge": "/components/badge/index",
-    "i-order-preview": "/components/order-preview/index"
+    "i-order-preview": "/components/order-preview/index",
+    "i-mask": "/components/mask/index",
+    "i-order-info": "/components/order-info/index",
+    "i-uploader": "/components/image-uploader/index",
+    "mp-form": "weui-miniprogram/form/form",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-uploader": "weui-miniprogram/uploader/uploader",
+    "mp-toptips": "weui-miniprogram/toptips/toptips",
+    "mp-msg": "weui-miniprogram/msg/msg"
   },
   "style": "v2",
   "useExtendedLib": {

@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "发布服务",
+  "backgroundColorBottom": "#ffffff",
+  "usingComponents": {
+    "i-service-form": "/components/service-form/index"
+  }
 }
