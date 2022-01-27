@@ -1,0 +1,4 @@
+<!-- pages/service-management/index.wxml -->
+<view class="container">
+  <i-service-form form="{{formData}}" bind:submit="handleSubmit"></i-service-form>
+</view>

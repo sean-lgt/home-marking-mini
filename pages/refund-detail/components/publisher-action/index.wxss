@@ -1,0 +1,8 @@
+/* pages/refund-detail/components/publisher-action/index.wxss */
+.button{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 240rpx;
+}

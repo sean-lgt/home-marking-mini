@@ -20,7 +20,7 @@ Page({
     }
   },
   // 点击提交
-  async handleSubmit() {
+  async handleSubmit(event) {
     const modalRes = await wx.showModal({
       title: '提示',
       content: '是否确认申请发布该服务？',

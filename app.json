@@ -5,6 +5,7 @@
     "pages/login/index",
     "pages/Home/Home",
     "pages/Publish/Publish",
+    "pages/publisher-success/index",
     "pages/Message/Message",
     "pages/My/My",
     "pages/my-order/index",
@@ -13,7 +14,12 @@
     "pages/order-success/order-success",
     "pages/order/index",
     "pages/order-detail/index",
-    "pages/rating/index"
+    "pages/rating/index",
+    "pages/remark/index",
+    "pages/refund/index",
+    "pages/refund-detail/index",
+    "pages/refund-list/index",
+    "pages/service-management/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

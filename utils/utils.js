@@ -42,4 +42,7 @@ function getEventParam(event, target) {
   return event.detail[target]
 }
 
+
+
+
 export { throttle, getDataSet, getEventParam }
