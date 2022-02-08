@@ -1,0 +1,118 @@
+
+# dependencies
+**/node_modules
+# roadhog-api-doc ignore
+/src/utils/request-temp.js
+_roadhog-api-doc
+
+# production
+/dist
+/.vscode
+/miniprogram_npm
+**/project.private.config.json
+
+# misc
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+npm-debug.log*
+yarn-error.log
+
+/coverage
+.idea
+**/.idea
+yarn.lock
+package-lock.json
+ext.json
+*bak
+.vscode
+
+# visual studio code
+.history
+*.log
+functions/*
+.temp/**
+
+# screenshot
+screenshot
+.firebase
+.eslintcache
+
+.idea
+composer.lock
+composer.json
+nginx.conf
+*.log
+#thinkphp
+*.env
+.travis.yml
+*uploads/
+settings.json
+
+
+*database.php
+*config.php
+*ueditor.config.js
+.tern-project
+.idea/
+*DS_Store
+*.log
+*.txt
+*.jar
+*.war
+*.ear
+*.class
+*.sh
+*.sql
+*objects4
+
+# Windows system
+*.lnk
+*.cab
+*.msi
+*.msm
+*.msp
+$RECYCLE.BIN/
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+
+# Linux system
+*~
+
+# eclipse specific git ignore
+.target
+.gradle
+*.pydevproject
+.buildpath
+.project
+.metadata
+*.launch
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.cproject
+.texlipse
+
+# External tool builders
+.externalToolBuilders/
+
+# Packages
+*.tar
+*.tar.gz
+*.tar.bz2
+*.zip
+*.7z
+*.dmg
+*.iso
+*.rar
+
+# Compiled source
+*.dll
+*.exe
+*.rpm
+*.so
+

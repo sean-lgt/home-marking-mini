@@ -2,7 +2,7 @@
 import Service from "../../models/service"
 import Order from "../../models/order"
 import roleType from "../../enum/role-type"
-// TODO: 动态设置tabbar
+import { setTabBarBadge } from "../../utils/wx";
 import serviceType from "../../enum/service-type"
 import Token from "../../models/token"
 import { appointWithMeGrid, myAppointGrid, myProvideGird, mySeekGrid } from "../../config/grid";
@@ -41,7 +41,7 @@ Page({
    */
   onShow: async function() {
     const unreadCount = wx.getStorageSync("unread-count");
-    //TODO:动态设置tabbar
+    setTabBarBadge(unreadCount)
     const res = await Token.verifyToken()
     if (res.valid) {
       const userInfo = wx.getStorageSync("userInfo")

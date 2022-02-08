@@ -93,7 +93,7 @@ Page({
       const files = { urls: [] }
       for (let i = 0; i < event.tempFilePaths.length; i++) {
         const uploaded = await wxToPromise('uploadFile', {
-          url: APIConfig.baseUrl + '/v1/file', //仅为示例，非真实的接口地址
+          url: ApiConfig.baseUrl + '/v1/file', //仅为示例，非真实的接口地址
           filePath: event.tempFilePaths[i],
           name: 'file',
         })

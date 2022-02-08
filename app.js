@@ -1,17 +1,19 @@
 // app.js
+import Token from "./models/token";
+import { createStoreBindings } from "mobx-miniprogram-bindings";
+import { timStore } from "./store/tim";
 App({
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
+    const res = await Token.verifyToken();
+    const storeBindings = createStoreBindings(this, {
+      store: timStore,
+      actions: ['login'],
     })
+    if (res.valid) {
+      await this.login()
+    }
+
+    storeBindings.destroyStoreBindings()
   },
   globalData: {
     userInfo: null

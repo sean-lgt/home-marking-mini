@@ -1,0 +1,22 @@
+<!-- pages/conversation/components/message/index.wxml -->
+<!-- 信息内容展示组件 -->
+<view class="container">
+  <view class="time">{{_message.time}}</view>
+  <view class="message-area" style="{{_message.flow === flowEnum.IN ? '':'flex-direction:row-reverse;'}}">
+    <view class="avatar">
+      <image class="avatarimage" src="{{_message.avatar}}"></image>
+    </view>
+    <view class="content" style="background-color:{{_message.flow === flowEnum.IN ? '#FFF':'#F3D066'}}">
+      <!-- 普通文本消息 -->
+      <block wx:if="{{_message.type === TIM.TYPES.MSG_TEXT}}">{{_message.payload.text}}</block>
+      <!-- 图片 -->
+      <block wx:if="{{_message.type === TIM.TYPES.MSG_IMAGE}}">
+        <image bind:tap="handleImageTap" data-image="{{_message.payload.imageInfoArray[0]}}" src="{{_message.payload.imageInfoArray[1].url}}" mode="center"></image>
+      </block>
+      <!-- 服务链接内容 -->
+      <block wx:if="{{_message.type === TIM.TYPES.MSG_CUSTOM}}">
+        <i-service-link service="{{_message}}" bind:select="handleSelect" bind:send="handleSendLink"></i-service-link>
+      </block>
+    </view>
+  </view>
+</view>

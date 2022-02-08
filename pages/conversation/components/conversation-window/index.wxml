@@ -1,0 +1,19 @@
+<!-- pages/conversation/components/conversation-window/index.wxml -->
+<!-- 聊天窗口 -->
+<view class="container">
+  <!-- 滚动组件 -->
+  <scroll-view class="message-list" style="height:{{scrollHeight}}px" scroll-into-view="message-{{intoView}}" scroll-y="{{true}}" enhanced show-scrollbar="{{false}}" bindscrolltoupper="handleScrolltoupper">
+    <view wx:for="{{messageList}}" wx:key="index" id="message-{{index}}" style="{{index === messageList.length - 1 ? 'padding-bottom:30rpx;':''}}">
+      <i-message message="{{item}}" bind:select="handleSelect" bind:send="handleSendLink"></i-message>
+    </view>
+  </scroll-view>
+  <!-- 底部操作栏 -->
+  <view class="action-bar">
+    <view class="inner-container">
+      <i-icon size="60" name="picture" bind:tap="handleSendPicture"></i-icon>
+      <textarea value="{{content}}" bindinput="handleInput" class="conversation-textarea" auto-height="{{true}}" cursor-spacing="{{30}}" hold-keyboard="{{true}}" disable-default-padding="{{true}}" placeholder="不要乱说话哦" fixed="{{true}}"></textarea>
+      <i-button radius="10" size="mini" bind:tap="handleSend" height="">发送</i-button>
+    </view>
+    <i-safe-area area="bottom"></i-safe-area>
+  </view>
+</view>

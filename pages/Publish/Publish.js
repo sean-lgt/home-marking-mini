@@ -76,7 +76,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    // TODO:需要setTabBar
+    const unreadCount = wx.getStorageSync('unread-count')
+    setTabBarBadge(unreadCount)
   },
 
   /**

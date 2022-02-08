@@ -1,7 +1,7 @@
 // pages/login/index.js
 import User from "../../models/user"
-// TODO:引入 mobx-miniprogram-bindings
-// TODO:引入store
+import { createStoreBindings } from "mobx-miniprogram-bindings";
+import { timStore } from "../../store/tim";
 Page({
 
   /**
@@ -15,7 +15,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    // TODO:创建链接
+    this.storeBindings = createStoreBindings(this, {
+      store: timStore,
+      actions: { timLogin: 'login' },
+    })
   },
   // 获取用户信息
   async handleUserInfo(event) {
@@ -71,6 +74,7 @@ Page({
    */
   onUnload: function() {
     //TODO:销毁链接
+    this.storeBindings.destroyStoreBindings()
   },
 
   /**

@@ -69,11 +69,15 @@ Page({
 
   // 修改服务
   handleUpdateService() {
-    console.log('🚀【点击修改服务】', );
+    wx.navigateTo({
+      url: `/pages/service-management/index?service=${JSON.stringify(this.data.service)}`
+    })
   },
   // 立即聊天
   handleChat() {
-    console.log('🚀【点击聊天】', );
+    wx.navigateTo({
+      url: `/pages/conversation/index?targetUserId=${this.data.service.publisher.id}&service=${JSON.stringify(this.data.service)}`
+    })
   },
   // 点击支付
   handleOrder() {

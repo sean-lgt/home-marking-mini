@@ -19,7 +19,8 @@
     "pages/refund/index",
     "pages/refund-detail/index",
     "pages/refund-list/index",
-    "pages/service-management/index"
+    "pages/service-management/index",
+    "pages/conversation/conversation"
   ],
   "window":{
     "backgroundTextStyle":"light",

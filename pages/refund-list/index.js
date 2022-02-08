@@ -2,6 +2,9 @@
 import { Refund } from "../../models/refund";
 import roleType from "../../enum/role-type";
 import refundStatus from "../../enum/refund-status";
+
+const refundModel = new Refund()
+
 Page({
 
   /**
